@@ -1,0 +1,3 @@
+sinal de menos = fortemente privada
+sinal de mais = publica
+sinal de # = fracamente privado
