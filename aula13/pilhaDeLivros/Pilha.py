@@ -29,9 +29,9 @@ class Pilha:
         if self.topo == None:
             print("Pilho vazia\n-------------")
         else:
-            if self.topo.proximo == None:
-                self.proximo = None
-                self.topo = None
-            else:
-                self.topo = self.topo.proximo
+            # if self.topo.proximo == None:
+            #     self.proximo = None
+            #     self.topo = None
+            # else:
+            self.topo = self.topo.proximo
         self.imprimir()
