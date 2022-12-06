@@ -11,6 +11,8 @@ class Juridica(Pessoa):
 
     def imprimeCNPJ(self):
         print("CPNJ: ", self.__CNPJ)
+        print('-------------------')
+        
 
     def __emitirNotaFiscal(self, nome, cpf):
         print(f"Nome Empresa:  {self.nome}\n"
@@ -18,3 +20,8 @@ class Juridica(Pessoa):
         f"Inscriçao Estadual: {self.__inscricaoEstadual}\n"
         f"Cliente: {nome}\n"
         f"CPF: {cpf}")
+
+    def cupomfiscal(self):
+        nome = input(f'Informe nome: ')
+        cpf = input(f'Informe CPF: ')
+        self.__emitirNotaFiscal(nome, cpf)

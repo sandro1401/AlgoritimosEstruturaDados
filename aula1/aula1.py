@@ -14,4 +14,4 @@ def imprimiAreaCirculo(raio):
     print(calculaAreaCirculo(raio))
 
 
-imprimiAreaCirculo(3)
+imprimiAreaCirculo(4)

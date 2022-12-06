@@ -23,7 +23,7 @@ class Conta:
     
     def sacar(self, valor):
         if valor <= self.saldo - self.tarifa:
-            self.saldo -+ valor
+            self.saldo -= valor
             self.__descontarTarifa()
         else:
             print("Saldo insuficiente")

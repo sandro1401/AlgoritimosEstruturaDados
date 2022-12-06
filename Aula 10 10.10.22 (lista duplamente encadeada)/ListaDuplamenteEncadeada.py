@@ -2,28 +2,30 @@ from No import No
 
 class ListaDuplamenteEncadeada:
     def __init__(self):
-        # self.inicio = None
+        self.inicio = None
         # self.fim = None
-        self.ponteiro = None
+       
 
     def adicionarOrdemAlfabetica(self, valor):
-        if not self.ponteiro:
+        if self.inicio == None:
+            print("Lista Vazia!!!")
             nodo = No(valor)
-            self.ponteiro = nodo
+            self.inicio = nodo
             return
-        ordemAlfabeticaAtual = ord(self.ponteiro.dado)
-        ordemAlfabeticaNovo = ord(valor)
+        else:
+            ordemAlfabeticaAtual = ord(self.inicio.dado)
+            ordemAlfabeticaNovo = ord(valor)
 
-        if ordemAlfabeticaNovo > ordemAlfabeticaAtual:
-             nodo = No(valor)
-             self.ponteiro.prox = nodo
-             nodo.ant = self.ponteiro 
-             self.ponteiro = nodo
-        elif ordemAlfabeticaNovo < ordemAlfabeticaAtual:
-             nodo = No(valor)
-             nodo.prox = self.ponteiro 
-             self.ponteiro.ant = nodo 
-             self.ponteiro = nodo
+            if ordemAlfabeticaNovo < ordemAlfabeticaAtual:
+                nodo = No(valor)
+                self.inicio.proximo = nodo
+                nodo.ant = self.inicio 
+                self.inicio = nodo
+            elif ordemAlfabeticaNovo > ordemAlfabeticaAtual:
+                nodo = No(valor)
+                nodo.proximo = self.inicio 
+                self.inicio.ant = nodo 
+                self.inicio = nodo
 
 
 
@@ -58,18 +60,16 @@ class ListaDuplamenteEncadeada:
 
 #Para ordem inversa, inicia no fim e aponta para o anterior
     def imprimir(self):
-        if self.ponteiro == None:
+        if self.inicio == None:
             print("Lista vazia!\n-----------")
         else:
             print("-----------\n")
-            aux = self.ponteiro
-            while aux.ant:
-                self.ponteiro = aux.ant
-                
-            while aux.prox:
-                print(aux.dado)
-                self.ponteiro = aux.prox
-             
+            aux = self.inicio
+            while (aux):
+                print(aux.dado , "\n")
+                aux = aux.proximo
+                                
+               
 
     def removerDoInicio(self):
         if self.inicio == None:

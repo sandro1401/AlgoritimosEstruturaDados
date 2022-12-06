@@ -10,5 +10,6 @@ print("Novo Valor: ", c1.saldo)
 c1.depositar(10)
 print("Novo Valor: ", c1.saldo)
 
-c1.sacar(2008)
+c1.sacar(100)
 print("Novo Valor: ", c1.saldo)
+

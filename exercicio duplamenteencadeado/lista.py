@@ -19,13 +19,13 @@ class ListaDuplamenteEncadeada :
 		if (self.inicio == None) :
 			print("Lista esta vazia")
 		else :
-			print("\n Lista: ", end = ": ")
+			print("\n ordem entrada: ", end = ": ")
 			temp = self.inicio
 			while (temp != None) :
 				print(temp.dado, end = "  ")
 				temp = temp.proximo
 			
-			print("\n Lista: ", end = ": ")
+			print("\n ordenada: ", end = ": ")
 			temp = self.fim
 			while (temp != None) :
 				print( temp.dado, end = "  ")

@@ -8,8 +8,8 @@ p1.imprimirNome()
 
 f1 = Fisica(2, "Pedro", "Rua 2", "5198798798", "62626262626", 18, 78, 1.74)
 f1.imprimiCPF()
-# f1.__calculaIMC()
+f1.IMC()
 
 j1 = Juridica(1, "RM", "Rua 3", "513388788", "75-3535354/0001-45", "85848748", 1)
 j1.imprimeCNPJ()
-# j1.emitirNotaFiscal(f1.nome, f1.__cpf)
+j1.cupomfiscal()

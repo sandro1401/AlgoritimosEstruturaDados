@@ -12,6 +12,12 @@ class Fisica(Pessoa):
 
     def imprimiCPF(self):
         print("CPF: ", self.__cpf)
+        print('------------------')
+        
     
     def __calculaIMC(self):
-        print("IMC: ", self.peso/(self.altura * 2))
+        print("IMC: ", (self.peso/(self.altura * 2)))
+        print('------------------')
+
+    def IMC(self):
+        return self.__calculaIMC()

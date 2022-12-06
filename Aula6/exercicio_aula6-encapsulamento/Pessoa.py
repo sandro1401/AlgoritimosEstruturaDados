@@ -8,6 +8,7 @@ class Pessoa:
 
     def imprimirNome(self):
         print("Nome: " , self.nome)
+        
 
     def __imprimiTelefone(self):
         print("Telefone: ", self.telefone)
